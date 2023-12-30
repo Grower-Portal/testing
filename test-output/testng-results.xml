@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-28T10:06:28 CST" name="Default suite" finished-at="2023-12-28T10:06:48 CST" duration-ms="19498">
+    <groups>
+    </groups>
+    <test started-at="2023-12-28T10:06:28 CST" name="Default test" finished-at="2023-12-28T10:06:48 CST" duration-ms="19498">
+      <class name="Scripts.TestClass">
+        <test-method is-config="true" signature="init(org.testng.ITestContext)[pri:0, instance:Scripts.TestClass@543295b0]" started-at="2023-12-28T10:06:28 CST" name="init" finished-at="2023-12-28T10:06:28 CST" duration-ms="493" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7237f3c1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="method()[pri:0, instance:Scripts.TestClass@543295b0]" started-at="2023-12-28T10:06:29 CST" name="method" finished-at="2023-12-28T10:06:43 CST" duration-ms="14135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method -->
+        <test-method signature="method1(java.util.Map)[pri:0, instance:Scripts.TestClass@543295b0]" started-at="2023-12-28T10:06:46 CST" name="method1" data-provider="loginPage" finished-at="2023-12-28T10:06:46 CST" duration-ms="53" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{UserName=Pravalika, Password=123456.0}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method1 -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:Scripts.TestClass@543295b0]" started-at="2023-12-28T10:06:46 CST" name="cleanup" finished-at="2023-12-28T10:06:48 CST" duration-ms="2194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- Scripts.TestClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
