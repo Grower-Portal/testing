@@ -20,11 +20,9 @@ public WebElement sensorDataDashboard;
 public void sensorDatamethod() {
 	
 	try {
-		
 		CommonFunctions.clickelement(menuButton);
 		CommonFunctions.sendkeys(sensorData, "Data");
-		CommonFunctions.sendkeys(sensorDataDashboard, "details");
-		
+		CommonFunctions.sendkeys(sensorDataDashboard, "details");	
 	}
 	catch(Exception e) {
 		

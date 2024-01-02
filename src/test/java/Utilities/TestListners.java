@@ -15,7 +15,7 @@ public class TestListners implements ITestListener {
 	public void onTestSuccess(ITestResult tr) {
 		// TODO Auto-generated method stub
 		System.out.println("TestCase got passed successfully :" +tr.getName());
-		CommonFunctions.takeScreenshot("/pass/" +tr.getName());
+		//CommonFunctions.takeScreenshot("/pass/" +tr.getName());
 	
 		 // Reporter.log("<a href='" + destFile.getAbsolutePath() + "'><img src='" +destFile.getAbsolutePath() + "'height='100' width='100'/></a>"); 
 

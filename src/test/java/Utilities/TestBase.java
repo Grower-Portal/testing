@@ -141,21 +141,23 @@ System.out.println("I am a destination file");
 	}
 
 	
-	/*
-	 * public String captureScreen(String fileName, WebDriver driver) {
-	 * 
-	 * if (driver == null) { return null; } if (fileName == "") { fileName ="blank";
-	 * } Reporter.log("captureScreen method called"); File destFile = null; Calendar
-	 * calendar = Calendar.getInstance(); SimpleDateFormat formater = new
-	 * SimpleDateFormat("dd_MM_yyyy_hh_mm_ss"); File screFile = ((TakesScreenshot)
-	 * driver).getScreenshotAs(OutputType.FILE); try { destFile = new
-	 * File(reportDirectery + "/" + fileName + "_" +
-	 * formater.format(calendar.getTime()) + ".png"); Files.copy(screFile.toPath(),
-	 * destFile.toPath()); Reporter.log("<a href='" + destFile.getAbsolutePath() +
-	 * "'><img src='" +destFile.getAbsolutePath() +
-	 * "'height='100' width='100'/></a>"); } catch (Exception e) {
-	 * e.printStackTrace(); } return destFile.toString(); }
-	 */
+	
+	  public String captureScreen(String fileName, WebDriver driver) {
+	  
+	  if (driver == null) { return null; } if (fileName == "") { fileName ="blank";
+	  } Reporter.log("captureScreen method called"); File destFile = null; Calendar
+	  calendar = Calendar.getInstance(); SimpleDateFormat formater = new
+	  SimpleDateFormat("dd_MM_yyyy_hh_mm_ss"); File screFile = ((TakesScreenshot)
+	  driver).getScreenshotAs(OutputType.FILE); try { destFile = new
+	  File(reportDirectery + "/" + fileName + "_" +
+	  formater.format(calendar.getTime()) + ".png"); Files.copy(screFile.toPath(),
+	  destFile.toPath()); 
+	  
+	  Reporter.log("<a href='" + destFile.getAbsolutePath() + "'><img src='" +destFile.getAbsolutePath() + "'height='100' width='100'/></a>"); 
+	  } catch (Exception e) {
+	  e.printStackTrace(); } 
+	  return destFile.toString(); }
+	 
 	public static String getResourcePath(String path) {
 		String basePath = System.getProperty("user.dir");
 		System.out.println(basePath + "/" + path);
