@@ -94,8 +94,6 @@ public void createAccountmethod(Map<String, String> dataMap ) {
 		
 	}
 	
-	
-	
 }
 public boolean validateEmailFormat(String Email) {
 	String RegEx = "^[a-zA-Z0-9_-]+@[a-zA-Z0-9.-]+$";

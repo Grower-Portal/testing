@@ -1,5 +1,9 @@
 package Utilities;
 
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -7,6 +11,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -236,5 +241,30 @@ public static void scrollToElement (WebElement element) throws InterruptedExcept
 	waitForElement(driver, element, 20);
 implicitWait(60);
 
+}
+
+
+public static void UploadFile(String path) {
+try {
+	
+	Thread.sleep(2000); // suspending execution for specified time // period
+	Robot rb = new Robot();
+	// copying File path to Clipboard
+	StringSelection str = new StringSelection(path);
+	Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
+	// press Control+V for pasting 
+	rb.keyPress(KeyEvent .VK_CONTROL);
+	
+	rb.keyPress(KeyEvent.VK_V);
+	// release Control+V for pasting 
+	rb.keyRelease(KeyEvent.VK_CONTROL); 
+	rb.keyRelease(KeyEvent.VK_V);
+	// for pressing and releasing Enter 
+	rb.keyPress(KeyEvent.VK_ENTER);
+	rb.keyRelease(KeyEvent.VK_ENTER);
+} catch (Exception e) {
+test.log(Status.FAIL, "Unable to excute method UploadCvunderProfilePage " + e.getMessage()); 
+e.printStackTrace();
+}
 }
 }
