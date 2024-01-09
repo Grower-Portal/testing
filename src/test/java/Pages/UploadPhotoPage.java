@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.model.Test;
@@ -12,6 +13,11 @@ import Utilities.CommonFunctions;
 import Utilities.TestBase;
 
 public class UploadPhotoPage extends TestBase{
+	public UploadPhotoPage() {
+		super();
+		PageFactory.initElements(driver, this);
+		
+	}
 	
 @FindBy(xpath="//div[@id='menu-button']")
 public WebElement menuButton;

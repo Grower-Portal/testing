@@ -2,10 +2,17 @@ package Pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import Utilities.CommonFunctions;
+import Utilities.TestBase;
 
-public class ForgetPasswordPage {
+public class ForgetPasswordPage extends TestBase {
+	public ForgetPasswordPage() {
+		super();
+		PageFactory.initElements(driver, this);
+	}
+	
 	
 @FindBy(xpath="//p[@class= 'forgot-password']")
 public WebElement forgotPassword;

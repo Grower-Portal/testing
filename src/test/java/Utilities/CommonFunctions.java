@@ -46,6 +46,25 @@ public static void clickElement(WebElement element) {
 	}
 }
 
+public static void captureScreen(String fileName) {
+
+	Reporter.log("captureScreen method called");
+	File destFile = null;
+	Calendar calendar = Calendar.getInstance();
+	SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
+	File screFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	try {
+		destFile = new File(reportDirectery + "/" + fileName + "_" + formater.format(calendar.getTime()) + ".png");
+		Files.copy(screFile, destFile);
+
+		Reporter.log("<a href='" + destFile.getAbsolutePath() + "'><img src='" + destFile.getAbsolutePath()
+				+ "'height='100' width='100'/></a>");
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	// return destFile.toString();
+}
+
 public static void implicitWait(int seconds) {
 	driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
 	}

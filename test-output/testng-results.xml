@@ -2,30 +2,33 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Screenshort method got called]]>
+      <![CDATA[captureScreen method called]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\student\eclipse-workspace\GrowerPortal\screenshots\method1_05_01_2024_08_18_41.png'><img src='C:\Users\student\eclipse-workspace\GrowerPortal\screenshots\method1_05_01_2024_08_18_41.png'height='100' width='100'/></a>]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-01-02T08:58:47 CST" name="Grow" finished-at="2024-01-02T08:59:26 CST" duration-ms="39190">
+  <suite started-at="2024-01-05T08:18:25 CST" name="Grow" finished-at="2024-01-05T08:18:44 CST" duration-ms="18894">
     <groups>
     </groups>
-    <test started-at="2024-01-02T08:58:47 CST" name="Portal" finished-at="2024-01-02T08:59:26 CST" duration-ms="39190">
+    <test started-at="2024-01-05T08:18:25 CST" name="Portal" finished-at="2024-01-05T08:18:44 CST" duration-ms="18894">
       <class name="Scripts.TestClass">
-        <test-method is-config="true" signature="init(org.testng.ITestContext)[pri:0, instance:Scripts.TestClass@54422e18]" started-at="2024-01-02T08:58:47 CST" name="init" finished-at="2024-01-02T08:58:47 CST" duration-ms="561" status="PASS">
+        <test-method is-config="true" signature="init(org.testng.ITestContext)[pri:0, instance:Scripts.TestClass@54422e18]" started-at="2024-01-05T08:18:25 CST" name="init" finished-at="2024-01-05T08:18:25 CST" duration-ms="517" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2b916808]]>
+                <![CDATA[org.testng.TestRunner@62f11ebb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method is-config="true" signature="method()[pri:0, instance:Scripts.TestClass@54422e18]" started-at="2024-01-02T08:58:47 CST" name="method" finished-at="2024-01-02T08:59:02 CST" duration-ms="14796" status="PASS">
+        <test-method is-config="true" signature="method()[pri:0, instance:Scripts.TestClass@54422e18]" started-at="2024-01-05T08:18:25 CST" name="method" finished-at="2024-01-05T08:18:38 CST" duration-ms="12585" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- method -->
-        <test-method signature="method1(java.util.Map)[pri:0, instance:Scripts.TestClass@54422e18]" started-at="2024-01-02T08:59:05 CST" name="method1" data-provider="loginPage" finished-at="2024-01-02T08:59:05 CST" duration-ms="53" status="PASS">
+        <test-method signature="method1(java.util.Map)[pri:0, instance:Scripts.TestClass@54422e18]" started-at="2024-01-05T08:18:41 CST" name="method1" data-provider="loginPage" finished-at="2024-01-05T08:18:41 CST" duration-ms="41" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,11 +38,14 @@
           </params>
           <reporter-output>
             <line>
-              <![CDATA[Screenshort method got called]]>
+              <![CDATA[captureScreen method called]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\Users\student\eclipse-workspace\GrowerPortal\screenshots\method1_05_01_2024_08_18_41.png'><img src='C:\Users\student\eclipse-workspace\GrowerPortal\screenshots\method1_05_01_2024_08_18_41.png'height='100' width='100'/></a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- method1 -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:Scripts.TestClass@54422e18]" started-at="2024-01-02T08:59:07 CST" name="cleanup" finished-at="2024-01-02T08:59:26 CST" duration-ms="19516" status="PASS">
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:Scripts.TestClass@54422e18]" started-at="2024-01-05T08:18:42 CST" name="cleanup" finished-at="2024-01-05T08:18:44 CST" duration-ms="2410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->

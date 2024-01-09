@@ -2,10 +2,16 @@ package Pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import Utilities.CommonFunctions;
+import Utilities.TestBase;
 
-public class UserInformationPage {
+public class UserInformationPage extends TestBase {
+	public UserInformationPage() {
+		super();
+		PageFactory.initElements(driver, this);
+	}
 
 	
 @FindBy(xpath="//div[@id='menu-button']")
