@@ -23,4 +23,13 @@ public static class StaticProviderSignUpPage{
 	}
 
 }
+public static class StaticProviderdashboardPage{
+	@DataProvider(name = "dashboard", parallel = false)
+	public static Iterator<Object[]> getdata(){
+		Iterator<Object[]> testData = DPExcelUtil.getTestData("input/GrowerPortal.xlsx", "dashboard");
+		return testData;
+		
+	}
+
+}
 }

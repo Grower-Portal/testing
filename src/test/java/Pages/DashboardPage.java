@@ -4,34 +4,98 @@ import java.util.Map;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.aventstack.extentreports.Status;
 
 import Utilities.CommonFunctions;
+import Utilities.TestBase;
 
-public class DashboardPage {
+public class DashboardPage extends TestBase {
+	public DashboardPage() {
+		super();
+		PageFactory.initElements(driver, this);
+	}
 	
-@FindBy(xpath="//div[@id='menu-button']")
-public WebElement menuButton;
+	@FindBy(xpath="//div[@id='menu-button']")
+	public WebElement menuButton;
 
-@FindBy(xpath="//a[@href='/Dashboard']")
-public WebElement dashboard;
+	@FindBy(xpath="//a[@href='/Application+Dashboard']")
+	public WebElement dashboard;
+		
+	@FindBy(xpath="//span[@class='help-icon']")
+	public WebElement helpIcon;
+
+	@FindBy(xpath="//button[@class='btn btn-add']")
+	public WebElement addApplicationButton;
 	
-@FindBy(xpath="//div[@id='upload-container']")
-public WebElement uploadContainer;
-
-@FindBy(xpath="//input[@id='file-input']")
-public WebElement chooseFile;
-LoginPage lp = new LoginPage();
-
-
-public void dashboardmethod(Map<String, String> dataMap) {
+	@FindBy(xpath="//input[@type='text']")
+	public WebElement applicantName;
 	
-	try {
-	lp.navigationMenu(dataMap.get("menuOption"));
+	@FindBy(xpath="//tbody[@id='applicationList']//td/select")
+	public WebElement statusField;
+	
+	@FindBy(xpath="//button[@class='btn btn-start-application']")
+	public WebElement startApplicationButton;
+	
+//	@FindBy(xpath="//div[@class='form-screen']")
+//	public WebElement producerInfrmtnPage;
+
+
+	
+	
+	
+	LoginPage lp = new LoginPage();
+
+	// private Map<String, String> dataMap;
+	public void dashboardStartApplication(String UserName, String DropdownOpt, int size) {
+		
+		
+		try {
+			for (int i=0;i<size;i++) {
+				if (i>0)  {	
+					
+					CommonFunctions.clickElement(addApplicationButton);
+				
+				}
+				//CommonCode
+				CommonFunctions.enterText(applicantName, UserName);
+				test.log(Status.PASS, "Successfully entered the applicant name :" +UserName);
+				CommonFunctions.selectByValue(statusField, DropdownOpt);
+				test.log(Status.PASS, "Successfully selected dropdown value :" +DropdownOpt);
+				CommonFunctions.clickElement(startApplicationButton);
+				
+//				CommonFunctions.waitForPageLoaded();
+//				CommonFunctions.waitForElement(driver, producerInfrmtnPage, 5);
+//				if (producerInfrmtnPage.isDisplayed()) {
+//					//if (url == "https://growerPortal/landingPage") {
+//						test.log(Status.PASS,
+//								"Successfully entered the data in the add application fields :" + UserName + " and dropdown :" + DropdownOpt);
+//
+//					} else {
+//						test.log(Status.FAIL, "Applicant name is empty");
+//					}
+//				
+		
+			}	
+		}
+		catch(Exception e) {
+			
+		}
+	}
+	public void splitData(Map<String, String> dataMap) {
+		lp.navigationMenu(dataMap.get("menuOption"));
+		System.out.println(dataMap.get("applicationName").split(";"));
+		String[] split = dataMap.get("applicationName").split(";");
+		System.out.println(split[0]);
+		for (String each: split) {
+			String[] seperate = each.split(":");
+			dashboardStartApplication(seperate[0],seperate[1],split.length);
+		}
 		
 	}
-	catch(Exception e) {
-		
+	
+	
 	}
-}
-}
+
 

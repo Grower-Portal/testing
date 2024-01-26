@@ -84,7 +84,6 @@ public void createAccountmethod(Map<String, String> dataMap ) {
 		test.log(Status.PASS, "Successfully created the account :");
 		
 		
-		
 	} else {
 		test.log(Status.FAIL, "Entered email is in invalid format");
 	}
