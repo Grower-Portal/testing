@@ -66,48 +66,68 @@ public class AddApplicationPage extends TestBase {
 	@FindBy(xpath = "//tr/td[1]/input")
 	public WebElement txt_farmIdInput;
 	
-	
+	@FindBy(xpath = "//tr/td[2]/input")
+	public WebElement txt_tractIdInput;
 	
 	@FindBy(xpath = "//td/div[1]/input")
-	public WebElement txt_farmIdInput;
-	//td/div[1]/input
+	public WebElement txt_fieldIdInput;
 	
+	//required xpaths for 3 fields
 	
+	@FindBy(xpath = "//td/input[@name='reportQtyAcres']")
+	public WebElement txt_reportAcres;
 	
+	@FindBy(xpath = "//td/select[@name='commodityCategory']")
+	public WebElement drpdwn_commodityCategory;
 	
-
-	@FindBy(xpath = "//option[@value='Crop land']")
-	public WebElement fieldLandUse;
-
-	@FindBy(xpath = "//option[@value='Crop land']/parent::select") // Xpath required
-	public WebElement fieldIrrigation;
-
-	@FindBy(xpath = "//option[@value='Conventional, Inversion']")
-	public WebElement fieldTillage;
+	@FindBy(xpath = "//td/select[@name='commodityType']")
+	public WebElement drpdwn_commodityType;
+	
+	@FindBy(xpath = "//td/select[@name='fieldLandUseHistory']")
+	public WebElement drpdwn_landHistory;
+	
+	@FindBy(xpath = "//td/select[@name='fieldIrrigationHistory']")
+	public WebElement drpdwn_irrigationHistory;
+	
+	@FindBy(xpath = "//td/select[@name='fieldTillageHistory']")
+	public WebElement drpdwn_tillageHistory;
+	
+	@FindBy(xpath = "//td/select[@name='fieldCsafPracticeHistory']")
+	public WebElement drpdwn_csaPracticeHistory;
+	
+	@FindBy(xpath = "//td/select[@name='pastCsafPracticeHistory']")
+	public WebElement drpdwn_pastCsaPracticeHistory;
+	
 
 	@FindBy(xpath = "//input[@name='applicationAcres']")
 	public WebElement applicationAcres;
 
-	@FindBy(xpath = "//input[@name='totalLandArea']")
+	@FindBy(xpath = "//td/select[@name='totalLandArea']")
 	public WebElement totalLandArea;
+	
+	@FindBy(xpath = "//td/input[@name='totalCropland']")
+	public WebElement totalCropArea;
 
-	@FindBy(xpath = "//select[@name='produceLivestock']")
+	@FindBy(xpath = "//td/select[@name='produceLivestock']")
 	public WebElement produceLivestock;
 
 	@FindBy(xpath = "//select[@name='livestockType1']")
 	public WebElement livestockTypeOne;
 
-	@FindBy(xpath = "//select[@name='produceLivestock']") // Xpath
+	@FindBy(xpath = "//input[@name='livestockHead1']")
 	public WebElement livestockHeadOne;
 
 	@FindBy(xpath = "//select[@name='livestockType2']")
 	public WebElement livestockTypeTwo;
 
-	@FindBy(xpath = "//select[@name='produceLivestock']") // Xpath
+	@FindBy(xpath = "//input[@name='livestockHead2']") 
 	public WebElement livestockHeadTwo;
 
 	@FindBy(xpath = "//select[@name='livestockType3']")
 	public WebElement livestockTypeThree;
+	
+	@FindBy(xpath = "//input[@name='livestockHead3']']")
+	public WebElement livestockHeadThree;
 
 	@FindBy(xpath = "//input[@name='totalForestArea']")
 	public WebElement totalForestArea;
@@ -115,7 +135,7 @@ public class AddApplicationPage extends TestBase {
 	@FindBy(xpath = "//input[@name='fsaPhysicalLocation']")
 	public WebElement physicalLocation;
 
-	@FindBy(xpath = "//select[@name='pastCSAFPractice']")
+	@FindBy(xpath = "//td/select[@name='pastCSAFPractice']")
 	public WebElement pastPracticDrpdwn;
 
 	@FindBy(xpath = "//input[@type='file']")
@@ -149,13 +169,13 @@ public class AddApplicationPage extends TestBase {
 
 	}
 
-	public void farmDetailsmethod(Map<String, String> dataMap) {
+	public void farmandTractDetailsmethod(Map<String, String> dataMap) {
 
 		try {
 			CommonFunctions.clickElement(addFarmButton);
 			
 			
-			int position=getPositionofTheHeader
+			//int position=getPositionofTheHeader
 		} catch (Exception e) {
 
 		}
@@ -178,10 +198,11 @@ public class AddApplicationPage extends TestBase {
 		return position;
 	}
 
-	public void fieldHistorymethod(Map<String, String> dataMap) {
+	public void commodityInformationmethod(Map<String, String> dataMap) {
 
 		try {
-			CommonFunctions.selectByValue(fieldLandUse, dataMap.get("FieldLandUseHistory"));
+			CommonFunctions.enterText(txt_reportAcres, dataMap.get(dataMap));
+			CommonFunctions.selectByValue(drpdwn_commodityCategory, dataMap.get("FieldLandUseHistory"));
 			CommonFunctions.selectByValue(fieldIrrigation, dataMap.get("FieldIrrigationHistory"));
 			CommonFunctions.selectByValue(fieldTillage, dataMap.get("FieldTillageHistory"));
 			CommonFunctions.clickElement(nextButton);

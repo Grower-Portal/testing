@@ -5,10 +5,8 @@
     <classes>
       <class name="Scripts.TestClass">
         <methods>
-          <include name="method"/>
-          <include name="cleanup"/>
           <include name="init"/>
-          <include name="method1"/>
+          <include name="method1" invocation-numbers="0"/>
         </methods>
       </class> <!-- Scripts.TestClass -->
     </classes>
