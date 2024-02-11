@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Grow">
+<listeners><listener class-name = "Utilities.TestListners" /></listeners>
+  <test thread-count="5" name="Portal">
+    <classes>
+      
+      <class name="Scripts.TestClass"/>
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
