@@ -56,8 +56,8 @@ public class TestBase {
 			try {
 		
 		if(strBrowser.equalsIgnoreCase("CHROME")) {
-			//String path = System.getProperty("user.dir") + "\\driver\\chromedriver.exe";
-			String path="C:\\CodeBase\\testing\\DriverPath\\chromedriver-win64\\chromedriver.exe";
+			String path = System.getProperty("user.dir");
+			 path=path+"\\DriverPath\\chromedriver-win64\\chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver", path); 
 			//WebDriverManager.chromedriver().setup();
 			HashMap<String, Object> chromePrefs = new HashMap<String, Object>(); 

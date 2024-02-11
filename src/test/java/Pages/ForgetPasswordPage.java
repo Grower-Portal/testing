@@ -30,9 +30,9 @@ public WebElement resetPassword;
 public void forgetPasswordmethod() {
 	
 	try {
-		CommonFunctions.clickelement(forgotPassword);
-		CommonFunctions.sendkeys(email, "pravalikakatta957@gmail.com");
-		CommonFunctions.clickelement(resetPassword);
+		CommonFunctions.clickElement(forgotPassword);
+		CommonFunctions.enterText(email, "pravalikakatta957@gmail.com");
+		CommonFunctions.clickElement(resetPassword);
 		
 	}
 	catch(Exception e) {
