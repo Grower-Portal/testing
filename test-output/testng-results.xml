@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[captureScreen method called]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\suvar\OneDrive\Documents\project\testing\screenshots\uploadc75776e0-c7fe-4681-831e-369885f1fc4b_12_02_2024_08_33_30.png'><img src='C:\Users\suvar\OneDrive\Documents\project\testing\screenshots\uploadc75776e0-c7fe-4681-831e-369885f1fc4b_12_02_2024_08_33_30.png'height='100' width='100'/></a>]]>
+    </line>
   </reporter-output>
-  <suite started-at="2024-02-11T22:14:42 IST" name="Default suite" finished-at="2024-02-11T22:15:13 IST" duration-ms="30309">
+  <suite started-at="2024-02-12T20:27:16 IST" name="Default suite" finished-at="2024-02-12T20:33:31 IST" duration-ms="374548">
     <groups>
     </groups>
-    <test started-at="2024-02-11T22:14:42 IST" name="Default test" finished-at="2024-02-11T22:15:13 IST" duration-ms="30309">
-      <class name="Scripts.ValidateContactUsFunctionality">
-        <test-method is-config="true" signature="init(org.testng.ITestContext)[pri:0, instance:Scripts.ValidateContactUsFunctionality@cb0755b]" started-at="2024-02-11T22:14:42 IST" name="init" finished-at="2024-02-11T22:14:42 IST" duration-ms="199" status="PASS">
+    <test started-at="2024-02-12T20:27:16 IST" name="Default test" finished-at="2024-02-12T20:33:31 IST" duration-ms="374548">
+      <class name="Scripts.ValidateUploadPhotoFunctionality">
+        <test-method is-config="true" signature="init(org.testng.ITestContext)[pri:0, instance:Scripts.ValidateUploadPhotoFunctionality@33065d67]" started-at="2024-02-12T20:27:16 IST" name="init" finished-at="2024-02-12T20:27:16 IST" duration-ms="228" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@15214920]]>
+                <![CDATA[org.testng.TestRunner@1e191150]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method is-config="true" signature="method()[pri:0, instance:Scripts.ValidateContactUsFunctionality@cb0755b]" started-at="2024-02-11T22:14:42 IST" name="method" finished-at="2024-02-11T22:14:47 IST" duration-ms="4306" status="PASS">
+        <test-method is-config="true" signature="method()[pri:0, instance:Scripts.ValidateUploadPhotoFunctionality@33065d67]" started-at="2024-02-12T20:27:16 IST" name="method" finished-at="2024-02-12T20:27:21 IST" duration-ms="4587" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- method -->
-        <test-method signature="validatelogin()[pri:1, instance:Scripts.ValidateContactUsFunctionality@cb0755b]" started-at="2024-02-11T22:14:47 IST" name="validatelogin" finished-at="2024-02-11T22:15:01 IST" duration-ms="14570" status="PASS">
+        <test-method signature="validatelogin()[pri:1, instance:Scripts.ValidateUploadPhotoFunctionality@33065d67]" started-at="2024-02-12T20:27:21 IST" name="validatelogin" finished-at="2024-02-12T20:27:35 IST" duration-ms="14585" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatelogin -->
-        <test-method signature="validatecontactus(java.util.Map)[pri:2, instance:Scripts.ValidateContactUsFunctionality@cb0755b]" started-at="2024-02-11T22:15:02 IST" name="validatecontactus" data-provider="ContactUs" finished-at="2024-02-11T22:15:12 IST" duration-ms="10501" status="PASS">
+        <test-method signature="validateAbout(java.util.Map)[pri:2, instance:Scripts.ValidateUploadPhotoFunctionality@33065d67]" started-at="2024-02-12T20:27:36 IST" name="validateAbout" data-provider="UploadPhoto" finished-at="2024-02-12T20:33:30 IST" duration-ms="354310" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{menuOption=Contact Us, contactUsText=Contact Us, PhoneNumber=Phone number: Your Phone Number, Email=Email: Your Email Address, EmailText=We aim to respond within 24 hours. Feel free to reach out to us with any inquiries, and we'll get back to you as soon as possible., ChatUS=Chat Us: Start Chat}]]>
+                <![CDATA[{menuOption=Upload Photo, Path=C:\Users\suvar\OneDrive\Documents\project\testing\upload\th.jpg}]]>
               </value>
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[captureScreen method called]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\Users\suvar\OneDrive\Documents\project\testing\screenshots\uploadc75776e0-c7fe-4681-831e-369885f1fc4b_12_02_2024_08_33_30.png'><img src='C:\Users\suvar\OneDrive\Documents\project\testing\screenshots\uploadc75776e0-c7fe-4681-831e-369885f1fc4b_12_02_2024_08_33_30.png'height='100' width='100'/></a>]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- validatecontactus -->
-        <test-method is-config="true" signature="cleanup()[pri:0, instance:Scripts.ValidateContactUsFunctionality@cb0755b]" started-at="2024-02-11T22:15:12 IST" name="cleanup" finished-at="2024-02-11T22:15:13 IST" duration-ms="370" status="PASS">
+        </test-method> <!-- validateAbout -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:Scripts.ValidateUploadPhotoFunctionality@33065d67]" started-at="2024-02-12T20:33:30 IST" name="cleanup" finished-at="2024-02-12T20:33:31 IST" duration-ms="435" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-      </class> <!-- Scripts.ValidateContactUsFunctionality -->
+      </class> <!-- Scripts.ValidateUploadPhotoFunctionality -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
