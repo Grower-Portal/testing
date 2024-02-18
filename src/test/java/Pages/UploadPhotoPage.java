@@ -1,6 +1,7 @@
 package Pages;
 
 import java.util.Map;
+import java.util.UUID;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -41,12 +42,13 @@ public void UploadPhotoMethod(Map<String, String> dataMap) {
 	
 	try {
 	lp.navigationMenu(dataMap.get("menuOption"));
-		CommonFunctions.clickElement(chooseFile);
+		//CommonFunctions.clickElement(chooseFile);
 		CommonFunctions.waitForPageLoaded();
-		CommonFunctions.UploadFile(dataMap.get("Path"));
+		CommonFunctions.enterText(chooseFile,dataMap.get("Path"));
 		test.log(Status.INFO, "File was uploaded from the path :"+dataMap.get("Path"));
 		CommonFunctions.waitForPageLoaded();
-		CommonFunctions.clickElement(uploadPhoto);
+		uploadPhoto.click();
+		CommonFunctions.captureScreen("upload"+UUID.randomUUID().toString());
 	}
 	catch(Exception e) {
 		e.printStackTrace();

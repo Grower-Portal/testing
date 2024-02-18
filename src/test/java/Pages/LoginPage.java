@@ -1,5 +1,7 @@
 package Pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,6 +29,9 @@ public class LoginPage extends TestBase {
 
 	@FindBy(xpath = "//div[@id='menu-button']")
 	public WebElement landingPageMenu;
+	
+	@FindBy(xpath = "//div[@id='menu-button']")
+	public List<WebElement> lst_landingPageMenu;
 
 	public void loginmethod(String userId, String passwrd) {
 
@@ -37,8 +42,8 @@ public class LoginPage extends TestBase {
 			CommonFunctions.clickElement(logIn);
 			CommonFunctions.waitForPageLoaded();
 			String url = driver.getCurrentUrl();
-			CommonFunctions.waitForElement(driver, landingPageMenu, 10);
-		if (landingPageMenu.isDisplayed()) {
+			Thread.sleep(2000);
+		if (lst_landingPageMenu.size()>0) {
 			//if (url == "https://growerPortal/landingPage") {
 				test.log(Status.PASS,
 						"Able to Login with the credentials provided :" + userId + " and Password :" + passwrd);
@@ -56,7 +61,7 @@ public class LoginPage extends TestBase {
 		try {
 			CommonFunctions.clickElement(landingPageMenu);
 			CommonFunctions.implicitWait(10);
-			driver.findElement(By.xpath("//a[text()='"+menuOption+"']"));
+			driver.findElement(By.xpath("//a[text()='"+menuOption+"']")).click();
 			
 		 } catch (Exception e) {
 			test.log(Status.FAIL, "Unable to execute method : navigationMenu");

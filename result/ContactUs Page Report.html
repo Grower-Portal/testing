@@ -51,7 +51,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Dec 28, 2023 10:06:28 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 11, 2024 10:14:42 PM</span>
 				</a>
 			</li>
 			<li>
@@ -77,6 +77,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -127,10 +128,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -142,10 +143,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='70%'><span class='strong'>7</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='30%'>3</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -160,25 +161,25 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>myresult</span>
-						<span class='test-time'>Dec 28, 2023 10:06:29 AM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>Contact us Functionality</span>
+						<span class='test-time'>Feb 11, 2024 10:14:42 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 28, 2023 10:06:29 AM</span>
-	<span class='label end-time'>Dec 28, 2023 10:06:46 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+233ms</span>
+	<span class='label start-time'>Feb 11, 2024 10:14:42 PM</span>
+	<span class='label end-time'>Feb 11, 2024 10:15:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+916ms</span>
 </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
 				<li class='node level-1 leaf pass' status='pass' test-id='2'>
 					<div class='collapsible-header'>
-						<h5 class='node-name'>subheading</h5>
-						<span class="node-time label grey lighten-1 white-text">Dec 28, 2023 10:06:46 AM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+11ms</span>
+						<h5 class='node-name'>Validating with the provided credentials</h5>
+						<span class="node-time label grey lighten-1 white-text">Feb 11, 2024 10:15:01 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 14s+563ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -194,13 +195,76 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>10:06:46 AM</td>
-													<td class='step-details'>I got my report</td>
+													<td class='timestamp'>10:14:48 PM</td>
+													<td class='step-details'>Text entered is pravalikareddykatta1@gmail.com</td>
 												</tr>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>10:06:46 AM</td>
-													<td class='step-details'>Pravalika</td>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>10:14:49 PM</td>
+													<td class='step-details'>Text entered is 123456</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>10:14:59 PM</td>
+													<td class='step-details'>Clicked on Webelement : [[ChromeDriver: chrome on windows (7f007108da5b428cf37ed1eb30f774a4)] -> xpath: //button[@type = 'button']]</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>10:15:01 PM</td>
+													<td class='step-details'>Able to Login with the credentials provided :pravalikareddykatta1@gmail.com and Password :123456</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='3'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'>Validating contact us functionality</h5>
+						<span class="node-time label grey lighten-1 white-text">Feb 11, 2024 10:15:12 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 10s+501ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>10:15:12 PM</td>
+													<td class='step-details'>Clicked on Webelement : [[ChromeDriver: chrome on windows (7f007108da5b428cf37ed1eb30f774a4)] -> xpath: //div[@id='menu-button']]</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>10:15:12 PM</td>
+													<td class='step-details'>Content matched successfully :Contact Us</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>10:15:12 PM</td>
+													<td class='step-details'>Content Mismatched for :Your Phone Number</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>10:15:12 PM</td>
+													<td class='step-details'>Content Mismatched for :Your Email Address</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>10:15:12 PM</td>
+													<td class='step-details'>Content matched successfully :We aim to respond within 24 hours. Feel free to reach out to us with any inquiries, and we'll get back to you as soon as possible.</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>10:15:12 PM</td>
+													<td class='step-details'>Content Mismatched for :Start Chat</td>
 												</tr>
 										</tbody>
 									</table>
@@ -245,31 +309,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>1</div>
-				</div>
-			</div>
-			<div class='col s2'>
-				<div class='card-panel r'>
-					Steps
 					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>10</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 28, 2023 10:06:28 AM</div>
+					<div class='panel-lead'>Feb 11, 2024 10:14:42 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 28, 2023 10:06:46 AM</div>
+			 		<div class='panel-lead'>Feb 11, 2024 10:15:12 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 17s+575ms</div>
+					<div class='panel-lead'>0h 0m 30s+35ms</div>
 				</div>
 			</div>
 		</div>
@@ -283,21 +347,21 @@
 		<script>
 			var statusGroup = {
 				passParent: 1,
-				failParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 1,
-				failChild: 0,
+				passChild: 7,
+				failChild: 3,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 1,
-				exceptionsChild: 0,
+				infoChild: 0,
+				exceptionsChild: 3,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,
