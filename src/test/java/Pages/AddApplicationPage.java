@@ -20,9 +20,13 @@ public class AddApplicationPage extends TestBase {
 
 	@FindBy(xpath = "//div[@id='menu-button']")
 	public WebElement menuButton;
+	
+	@FindBy(xpath = "//button[@class='btn btn-primary']")
+	public WebElement btn_startApplication;
+	
 
-	@FindBy(xpath = "//a[@href='/AddApplication']")
-	public WebElement addApplication;
+//	@FindBy(xpath = "//a[@href='/AddApplication']")
+//	public WebElement addApplication;
 
 	@FindBy(xpath = "//label[contains(text(),'Producer Name')]/following-sibling::input[@type='text']")
 	public WebElement producerName;
@@ -107,6 +111,12 @@ public class AddApplicationPage extends TestBase {
 
 	@FindBy(xpath = "//td/select[@name='produceLivestock']")
 	public WebElement produceLivestock;
+	
+	@FindBy(xpath = "//td/input[@name='totalLiveStockAcres']")
+	public WebElement totalLiveStockAcres;
+	
+	
+	
 
 	@FindBy(xpath = "//select[@name='livestockType1']")
 	public WebElement livestockTypeOne;
@@ -135,18 +145,14 @@ public class AddApplicationPage extends TestBase {
 	@FindBy(xpath = "//td/select[@name='pastCSAFPractice']")
 	public WebElement pastPracticDrpdwn;
 
-	@FindBy(xpath = "//input[@type='file']")
-	public WebElement uploadDocument;
+	@FindBy(xpath = "//select[@name='transitioningToUsdaCertified']")
+	public WebElement transitioningToUsdaCertified;
 	
 	@FindBy(xpath = "//label[contains(text(), 'controlling members')]/following-sibling::input[@type='number']")
 	public WebElement controllongMembersincludingSpouses;
 	
 	@FindBy(xpath = "//label[contains(text(), 'has a current CCC-860 certification.')]/following-sibling::label[contains(text(), 'Yes')]")
 	public WebElement Currentcertification;
-	
-	
-	
-	
 	
 	
 	@FindBy(xpath = "//input[@name='firstYearFarmingRice']")
@@ -161,18 +167,29 @@ public class AddApplicationPage extends TestBase {
 	@FindBy(xpath = "//input[@name='incomePercentage']")
 	public WebElement incomePercentage;
 	
-	
-	
+
 
 	@FindBy(xpath = "//button[text()='Submit Application']")
 	public WebElement submitBtn;
+	
+	
+	public void startApplicationmethod() {
+
+		try {
+			CommonFunctions.clickElement(btn_startApplication);
+			
+		} catch (Exception e) {
+			e.getMessage();
+		}
+
+	}
 
 	public void addApplicationmethod(Map<String, String> dataMap) {
 
 		try {
 
 			CommonFunctions.clickElement(menuButton);
-			CommonFunctions.clickElement(addApplication);
+			//CommonFunctions.clickElement(addApplication);
 			CommonFunctions.enterText(producerName, dataMap.get("ProducerName"));
 			CommonFunctions.enterText(producerEntityName, dataMap.get("ProducerEntityName"));
 			CommonFunctions.enterText(countryOfResidence, dataMap.get("CountyofResidence"));
@@ -247,6 +264,7 @@ public class AddApplicationPage extends TestBase {
 			CommonFunctions.selectByValue(totalLandArea, dataMap.get("TotalLandArea"));
 			CommonFunctions.selectByValue(totalCropArea, dataMap.get("TotalCropArea"));
 			CommonFunctions.selectByValue(produceLivestock, dataMap.get("livestockInformation"));
+			CommonFunctions.selectByValue(totalLiveStockAcres, dataMap.get("LiveStockArea"));
 			CommonFunctions.clickElement(nextButton);
 
 		} catch (Exception e) {
@@ -282,8 +300,20 @@ public class AddApplicationPage extends TestBase {
 			CommonFunctions.enterText(totalForestArea, dataMap.get("TotalForestArea"));
 			CommonFunctions.enterText(physicalLocation, dataMap.get("FSAPhysicalLocation"));
 			CommonFunctions.selectByValue(pastPracticDrpdwn, dataMap.get("PastCSAFPractice"));
-			CommonFunctions.clickElement(uploadDocument);
-			CommonFunctions.UploadFile(dataMap.get("UploadDocument"));
+			CommonFunctions.selectByValue(transitioningToUsdaCertified, dataMap.get("TransitioningToUsdaCertified"));
+			CommonFunctions.clickElement(nextButton);
+
+		} catch (Exception e) {
+			e.getMessage();
+
+		}
+
+	}
+	
+	public void reviewYourApplicationmethod() {
+		
+		try {
+
 			CommonFunctions.clickElement(submitBtn);
 
 		} catch (Exception e) {
@@ -292,4 +322,8 @@ public class AddApplicationPage extends TestBase {
 		}
 
 	}
+		
+	
+	
 }
+
