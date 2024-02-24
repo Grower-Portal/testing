@@ -40,7 +40,11 @@ public void validateuserinformationt(Map<String, String> dataMap)  {
 @AfterClass()
 public void cleanup() {
 	TestBase.extent.flush();
+<<<<<<< HEAD
 	//driver.quit();
+=======
+	driver.quit();
+>>>>>>> 4cd16d686b20ace23f9c0e4db642fd5ab7d8d6f4
 }
 
 }

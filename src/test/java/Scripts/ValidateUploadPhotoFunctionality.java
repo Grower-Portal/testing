@@ -24,6 +24,7 @@ public class ValidateUploadPhotoFunctionality extends TestBase{
 		loginpage = new LoginPage();
 		
 	}
+<<<<<<< HEAD
 @Test(dataProvider = "loginPage", dataProviderClass = StaticProviderLoginPage.class)
 public void validatelogin(Map<String, String> dataMap)  {
 	TestBase.test=parenttest.createNode("Validating with the provided credentials");
@@ -31,6 +32,15 @@ public void validatelogin(Map<String, String> dataMap)  {
 }
 
 @Test(dataProvider = "UploadPhoto", dataProviderClass = StaticProviderUploadPhotoPage.class)
+=======
+@Test(priority = 1)
+public void validatelogin()  {
+	TestBase.test=parenttest.createNode("Validating with the provided credentials");
+	loginpage.loginmethod(TestBase.configMap.get("UserName"), TestBase.configMap.get("Password"));
+}
+
+@Test(dataProvider = "UploadPhoto", dataProviderClass = StaticProviderUploadPhotoPage.class,priority=2)
+>>>>>>> 4cd16d686b20ace23f9c0e4db642fd5ab7d8d6f4
 public void validateAbout(Map<String, String> dataMap)  {
 	TestBase.test=parenttest.createNode("Validating upload photo functionality");
 	uploadphotoPage.UploadPhotoMethod(dataMap);

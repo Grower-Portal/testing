@@ -48,19 +48,16 @@ public class DashboardPage extends TestBase {
 	LoginPage lp = new LoginPage();
 
 	// private Map<String, String> dataMap;
-	public void dashboardStartApplication(String UserName, String DropdownOpt, int size) {
+	public void dashboardStartApplication(int count, String DropdownOpt, int size) {
 		
 		
 		try {
-			for (int i=0;i<size;i++) {
-				if (i>0)  {	
+			
+				if (count>0)  {	
 					
 					CommonFunctions.clickElement(addApplicationButton);
 				
 				}
-				//CommonCode
-				CommonFunctions.enterText(applicantName, UserName);
-				test.log(Status.PASS, "Successfully entered the applicant name :" +UserName);
 				CommonFunctions.selectByValue(statusField, DropdownOpt);
 				test.log(Status.PASS, "Successfully selected dropdown value :" +DropdownOpt);
 				CommonFunctions.clickElement(startApplicationButton);
@@ -77,7 +74,7 @@ public class DashboardPage extends TestBase {
 //					}
 //				
 		
-			}	
+			
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -88,9 +85,12 @@ public class DashboardPage extends TestBase {
 		System.out.println(dataMap.get("applicationName").split(";"));
 		String[] split = dataMap.get("applicationName").split(";");
 		System.out.println(split[0]);
+		int count =0;
 		for (String each: split) {
 			String[] seperate = each.split(":");
-			dashboardStartApplication(seperate[0],seperate[1],split.length);
+			
+			dashboardStartApplication(count,seperate[1],split.length);
+			count=count+1;
 		}
 		
 	}

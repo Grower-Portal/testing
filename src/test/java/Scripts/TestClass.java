@@ -34,7 +34,7 @@ public class TestClass extends TestBase{
 //		test.log(Status.PASS, "I got my report");
 //		test.log(Status.INFO, dataMap.get("UserName"));
 		AddApplicationPage obj = new AddApplicationPage();
-		obj.splitData(dataMap);
+		//obj.splitData(dataMap);
 	
 	}
 	

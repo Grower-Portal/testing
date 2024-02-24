@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
+<<<<<<< HEAD
   </reporter-output>
   <suite started-at="2024-02-20T19:58:21 CST" name="Default suite" finished-at="2024-02-20T19:59:01 CST" duration-ms="39341">
     <groups>
@@ -12,12 +13,32 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@1d6751e3]]>
+=======
+    <line>
+      <![CDATA[captureScreen method called]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\suvar\OneDrive\Documents\project\testing\screenshots\uploadc75776e0-c7fe-4681-831e-369885f1fc4b_12_02_2024_08_33_30.png'><img src='C:\Users\suvar\OneDrive\Documents\project\testing\screenshots\uploadc75776e0-c7fe-4681-831e-369885f1fc4b_12_02_2024_08_33_30.png'height='100' width='100'/></a>]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2024-02-12T20:27:16 IST" name="Default suite" finished-at="2024-02-12T20:33:31 IST" duration-ms="374548">
+    <groups>
+    </groups>
+    <test started-at="2024-02-12T20:27:16 IST" name="Default test" finished-at="2024-02-12T20:33:31 IST" duration-ms="374548">
+      <class name="Scripts.ValidateUploadPhotoFunctionality">
+        <test-method is-config="true" signature="init(org.testng.ITestContext)[pri:0, instance:Scripts.ValidateUploadPhotoFunctionality@33065d67]" started-at="2024-02-12T20:27:16 IST" name="init" finished-at="2024-02-12T20:27:16 IST" duration-ms="228" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1e191150]]>
+>>>>>>> 4cd16d686b20ace23f9c0e4db642fd5ab7d8d6f4
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="method()[pri:0, instance:Scripts.ValidateAboutFunctionality@548d708a]" started-at="2024-02-20T19:58:21 CST" name="method" finished-at="2024-02-20T19:58:32 CST" duration-ms="11028" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -31,10 +52,26 @@
             <param index="0">
               <value>
                 <![CDATA[{menuOption=About, AboutPage=About Grower Portal, empoweringGrowers=Empowering Growers Through Precision Agriculture,  empoweringGrowersMatter=At Grower Portal, we are committed to revolutionizing the agricultural landscape by integrating cutting-edge technology into everyday farming practices. Our platform is designed to provide farmers with real-time water sensor data, enabling precise irrigation management that conserves resources and enhances crop yields., InnovativeWater=Innovative Water Sensing Technology, InnovativeWaterDescription=Our advanced water sensors are the heart of Grower Portal. They provide vital data on soil moisture levels, ensuring that crops receive the right amount of water at the right time. This not only leads to better crop health and increased production but also significantly reduces water waste., Geolocation=Geolocation and CLU Data Integration, GeolocationDescription=Grower Portal takes precision a step further by extracting geolocation data from captured images. This information is matched with Common Land Unit (CLU) data to give farmers insight into the soil levels and conditions of their fields. With this knowledge, they can tailor their cultivation strategies to the unique needs of their land., OurVision=Our Vision, OurVisionDescription=Our vision is to create a sustainable future where technology and traditional farming techniques merge seamlessly. We strive to provide tools that support growers in making informed decisions that benefit their crops, their community, and the planet., JoinUs=Join Us, JoinUsDescription=Join the growing number of farmers who are leveraging Grower Portal to bring about a new era in agriculture. Sign up today to start optimizing your water usage, understanding your soil better, and taking your farming operations to the next level.}]]>
+=======
+        <test-method is-config="true" signature="method()[pri:0, instance:Scripts.ValidateUploadPhotoFunctionality@33065d67]" started-at="2024-02-12T20:27:16 IST" name="method" finished-at="2024-02-12T20:27:21 IST" duration-ms="4587" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- method -->
+        <test-method signature="validatelogin()[pri:1, instance:Scripts.ValidateUploadPhotoFunctionality@33065d67]" started-at="2024-02-12T20:27:21 IST" name="validatelogin" finished-at="2024-02-12T20:27:35 IST" duration-ms="14585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatelogin -->
+        <test-method signature="validateAbout(java.util.Map)[pri:2, instance:Scripts.ValidateUploadPhotoFunctionality@33065d67]" started-at="2024-02-12T20:27:36 IST" name="validateAbout" data-provider="UploadPhoto" finished-at="2024-02-12T20:33:30 IST" duration-ms="354310" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{menuOption=Upload Photo, Path=C:\Users\suvar\OneDrive\Documents\project\testing\upload\th.jpg}]]>
+>>>>>>> 4cd16d686b20ace23f9c0e4db642fd5ab7d8d6f4
               </value>
             </param>
           </params>
           <reporter-output>
+<<<<<<< HEAD
           </reporter-output>
         </test-method> <!-- validateAbout -->
         <test-method is-config="true" signature="cleanup()[pri:0, instance:Scripts.ValidateAboutFunctionality@548d708a]" started-at="2024-02-20T19:59:00 CST" name="cleanup" finished-at="2024-02-20T19:59:01 CST" duration-ms="676" status="PASS">
@@ -42,6 +79,21 @@
           </reporter-output>
         </test-method> <!-- cleanup -->
       </class> <!-- Scripts.ValidateAboutFunctionality -->
+=======
+            <line>
+              <![CDATA[captureScreen method called]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\Users\suvar\OneDrive\Documents\project\testing\screenshots\uploadc75776e0-c7fe-4681-831e-369885f1fc4b_12_02_2024_08_33_30.png'><img src='C:\Users\suvar\OneDrive\Documents\project\testing\screenshots\uploadc75776e0-c7fe-4681-831e-369885f1fc4b_12_02_2024_08_33_30.png'height='100' width='100'/></a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateAbout -->
+        <test-method is-config="true" signature="cleanup()[pri:0, instance:Scripts.ValidateUploadPhotoFunctionality@33065d67]" started-at="2024-02-12T20:33:30 IST" name="cleanup" finished-at="2024-02-12T20:33:31 IST" duration-ms="435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- Scripts.ValidateUploadPhotoFunctionality -->
+>>>>>>> 4cd16d686b20ace23f9c0e4db642fd5ab7d8d6f4
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
