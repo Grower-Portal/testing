@@ -31,5 +31,73 @@ public static class StaticProviderdashboardPage{
 		
 	}
 
+
+}
+public static class StaticProviderforgetPasswordPage{
+	@DataProvider(name = "forgetPassword", parallel = false)
+	public static Iterator<Object[]> getdata(){
+		Iterator<Object[]> testData = DPExcelUtil.getTestData("input/GrowerPortal.xlsx", "forgetPassword");
+		return testData;
+	}
+}
+public static class StaticProviderAddApplicationPage{
+	@DataProvider(name = "AddApplication", parallel = false)
+	public static Iterator<Object[]> getdata(){
+		Iterator<Object[]> testData = DPExcelUtil.getTestData("input/GrowerPortal.xlsx", "AddApplication");
+		return testData;
+	}
+}
+public static class StaticProviderUploadPhotoPage{
+	@DataProvider(name = "UploadPhoto", parallel = false)
+	public static Iterator<Object[]> getdata(){
+		Iterator<Object[]> testData = DPExcelUtil.getTestData("input/GrowerPortal.xlsx", "UploadPhoto");
+		return testData;
+	}
+}
+public static class StaticProvideraboutPage{
+	@DataProvider(name = "about", parallel = false)
+	public static Iterator<Object[]> getdata(){
+		Iterator<Object[]> testData = DPExcelUtil.getTestData("input/GrowerPortal.xlsx", "about");
+		return testData;
+	}
+}
+public static class StaticProviderContactUsPage{
+	@DataProvider(name = "ContactUs", parallel = false)
+	public static Iterator<Object[]> getdata(){
+		Iterator<Object[]> testData = DPExcelUtil.getTestData("input/GrowerPortal.xlsx", "ContactUs");
+		return testData;
+	}
+}
+public static class StaticProviderreportPage{
+	@DataProvider(name = "report", parallel = false)
+	public static Iterator<Object[]> getdata(){
+		Iterator<Object[]> testData = DPExcelUtil.getTestData("input/GrowerPortal.xlsx", "report");
+		return testData;
+	}
+}
+
+
+public static class StaticProvidersensorDataPage{
+	@DataProvider(name = "sensorData", parallel = false)
+	public static Iterator<Object[]> getdata(){
+		Iterator<Object[]> testData = DPExcelUtil.getTestData("input/GrowerPortal.xlsx", "sensorData");
+		return testData;
+	}
+}
+public static class StaticProviderstepsToFollowPage{
+	@DataProvider(name = "stepsToFollow", parallel = false)
+	public static Iterator<Object[]> getdata(){
+		Iterator<Object[]> testData = DPExcelUtil.getTestData("input/GrowerPortal.xlsx", "stepsToFollow");
+		return testData;
+	}
+}
+public static class StaticProviderUserInformationPage{
+	@DataProvider(name = "UserInformation", parallel = false)
+	public static Iterator<Object[]> getdata(){
+		Iterator<Object[]> testData = DPExcelUtil.getTestData("input/GrowerPortal.xlsx", "UserInformation");
+		return testData;
+	}
+
 }
 }
+

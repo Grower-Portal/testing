@@ -56,6 +56,7 @@ public void reportmethod(Map<String, String>dataMap) {
 		
 	}
 	catch(Exception e) {
+		e.printStackTrace();
 		  
 		
 	}

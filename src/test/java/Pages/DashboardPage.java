@@ -80,7 +80,7 @@ public class DashboardPage extends TestBase {
 			}	
 		}
 		catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 	}
 	public void splitData(Map<String, String> dataMap) {

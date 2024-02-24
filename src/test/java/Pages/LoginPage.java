@@ -48,6 +48,7 @@ public class LoginPage extends TestBase {
 			}
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Unable to execute method : loginmethod");
+			e.printStackTrace();
 
 		}
 	}
@@ -59,6 +60,7 @@ public class LoginPage extends TestBase {
 			
 		 } catch (Exception e) {
 			test.log(Status.FAIL, "Unable to execute method : navigationMenu");
+			e.printStackTrace();
 		 }
 	}
 }

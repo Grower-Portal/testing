@@ -26,7 +26,7 @@ public WebElement chooseFile;
 LoginPage lp = new LoginPage();
 
 
-public void dashboardStartApplication(Map<String, String> dataMap) {
+public void uploadPhotoMethod(Map<String, String> dataMap) {
 	
 	try {
 		

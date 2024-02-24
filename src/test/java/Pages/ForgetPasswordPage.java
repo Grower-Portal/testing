@@ -36,7 +36,7 @@ public void forgetPasswordmethod() {
 		
 	}
 	catch(Exception e) {
-		
+		e.printStackTrace();	
 		
 	}
 	

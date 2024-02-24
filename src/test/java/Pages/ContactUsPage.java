@@ -28,19 +28,19 @@ public WebElement contactusBtn;
 //public WebElement contactusContainer;
 
 @FindBy(xpath="//h1[text()='Contact Us']")
-public WebElement contactUsTxt;
+public WebElement txt_contactUsTxt;
 
 @FindBy(xpath="//span[@id='phone']")
-public WebElement yourPhoneNum;
+public WebElement txt_yourPhoneNum;
 
 @FindBy(xpath="//span[@id='email']")
-public WebElement yourMailAddr;
+public WebElement txt_yourMailAddr;
 
 @FindBy(xpath="//p[contains(text(), 'inquiries')]")
-public WebElement descriptionTxt;
+public WebElement txt_emaildescriptionTxt;
 
 @FindBy(xpath="//span[@class='chat-link']")
-public WebElement startChat;
+public WebElement link_startChat;
 
 
 //@FindBy(xpath="//span[@class='help-icon']")
@@ -55,13 +55,43 @@ public void contactmethod(Map<String, String> dataMap) {
 	
 	try {
 		lp.navigationMenu(dataMap.get("menuOption"));
-		if (CommonFunctions.getValue(contactUsTxt).equalsIgnoreCase(dataMap.get("contactUsText"))) {
+		if (CommonFunctions.getValue(txt_contactUsTxt).equalsIgnoreCase(dataMap.get("contactUsText"))) {
 			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("contactUsText"));
 			
 		} else {
 		   
-			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(contactUsTxt));
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_contactUsTxt));
 		}
+		if (CommonFunctions.getValue(txt_yourPhoneNum).equalsIgnoreCase(dataMap.get("PhoneNumber"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("PhoneNumber"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_yourPhoneNum));
+		}
+		if (CommonFunctions.getValue(txt_yourMailAddr).equalsIgnoreCase(dataMap.get("Email"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("Email"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_yourMailAddr));
+		}
+		if (CommonFunctions.getValue(txt_emaildescriptionTxt).equalsIgnoreCase(dataMap.get("EmailText"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("EmailText"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_emaildescriptionTxt));
+		}
+		if (CommonFunctions.getValue(link_startChat).equalsIgnoreCase(dataMap.get("ChatUS"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("ChatUS"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(link_startChat));
+		}
+		
+		
 	
 	}
 	catch(Exception e) {

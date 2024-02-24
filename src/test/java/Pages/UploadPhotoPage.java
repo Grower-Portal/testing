@@ -37,7 +37,7 @@ public WebElement uploadPhoto;
 LoginPage lp = new LoginPage();
 
 
-public void dashboardmethod(Map<String, String> dataMap) {
+public void UploadPhotoMethod(Map<String, String> dataMap) {
 	
 	try {
 	lp.navigationMenu(dataMap.get("menuOption"));
@@ -49,6 +49,7 @@ public void dashboardmethod(Map<String, String> dataMap) {
 		CommonFunctions.clickElement(uploadPhoto);
 	}
 	catch(Exception e) {
+		e.printStackTrace();
 		
 	}
 }

@@ -22,7 +22,7 @@ public class ValidateSignUpFunctionality extends TestBase{
 		
 		parenttest = TestBase.extent.createTest("SignUp Functionality");
 		driver = TestBase.launchURL( TestBase.configMap.get("browser"),TestBase.configMap.get("ApplicationURL"));	
-				
+		signuppage = new CreateAccountPage();
 	}
 @Test(dataProvider = "createAccount", dataProviderClass = StaticProviderSignUpPage.class)
 public void validatelogin(Map<String, String> dataMap)  {
@@ -33,6 +33,7 @@ public void validatelogin(Map<String, String> dataMap)  {
 public void cleanup() {
 	TestBase.extent.flush();
 	driver.quit();
+	driver=null;
 }
 
 }

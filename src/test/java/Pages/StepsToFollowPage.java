@@ -28,25 +28,25 @@ public WebElement stepsToFollow;
 public WebElement stepsForApplication;
 
 @FindBy(xpath="//ol[@id=\"steps-container\"]/li[contains(text(),'Access')]")
-public WebElement stepOne;
+public WebElement txt_AccessApplicationForm;
 
 @FindBy(xpath="//ol[@id=\"steps-container\"]/li[contains(text(),'Basic')]")
-public WebElement stepTwo;
+public WebElement txt_BasicInformation;
 
 @FindBy(xpath="//ol[@id=\"steps-container\"]/li[contains(text(),'Detailed')]")
-public WebElement stepThree;
+public WebElement txt_ProvideInformation;
 
 @FindBy(xpath="//ol[@id=\"steps-container\"]/li[contains(text(),'Necessary')]")
-public WebElement stepFour;
+public WebElement txt_UploadDocuments;
 
 @FindBy(xpath="//ol[@id=\"steps-container\"]/li[contains(text(),'Review')]")
-public WebElement stepFive;
+public WebElement txt_ReviewApplication;
 
 @FindBy(xpath="//ol[@id=\"steps-container\"]/li[contains(text(),'Submit')]")
-public WebElement stepSix;
+public WebElement txt_SubmitApplication;
 
 @FindBy(xpath="//ol[@id=\"steps-container\"]/li[contains(text(),'Await')]")
-public WebElement stepSeven;
+public WebElement txt_AwaitConfirmation;
 
 LoginPage lp = new LoginPage();
 
@@ -62,6 +62,56 @@ public void stepsToFollowmethod(Map<String, String> dataMap) {
 			   
 				test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(stepsForApplication));
 			}
+		if (CommonFunctions.getValue(txt_AccessApplicationForm).equalsIgnoreCase(dataMap.get("AccessApplicationForm"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("txt_AccessApplicationForm"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_AccessApplicationForm));
+		}
+		if (CommonFunctions.getValue(txt_BasicInformation).equalsIgnoreCase(dataMap.get("BasicInformation"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("BasicInformation"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_BasicInformation));
+		}
+		if (CommonFunctions.getValue(txt_ProvideInformation).equalsIgnoreCase(dataMap.get("ProvideInformation"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("ProvideInformation"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_ProvideInformation));
+		}
+		if (CommonFunctions.getValue(txt_UploadDocuments).equalsIgnoreCase(dataMap.get("UploadDocuments"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("UploadDocuments"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_UploadDocuments));
+		}
+		if (CommonFunctions.getValue(txt_ReviewApplication).equalsIgnoreCase(dataMap.get("ReviewApplication"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("ReviewApplication"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_ReviewApplication));
+		}
+		if (CommonFunctions.getValue(txt_SubmitApplication).equalsIgnoreCase(dataMap.get("SubmitApplication"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("SubmitApplication"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_SubmitApplication));
+		}
+		if (CommonFunctions.getValue(txt_AwaitConfirmation).equalsIgnoreCase(dataMap.get("AwaitConfirmation"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("AwaitConfirmation"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_AwaitConfirmation));
+		}
+	
 		
 		}
 		catch(Exception e) {

@@ -30,11 +30,11 @@ import com.google.common.io.Files;
 public class CommonFunctions extends TestBase {
 public static void clickElement(WebElement element) {
 	try {
-		implicitWait(60);
-		waitForElement(driver, element,30);
-		waitForElementsToBeclickable(element,30);
+		//implicitWait(60);
+		waitForElement(driver, element,10);
+		//waitForElementsToBeclickable(element,30);
 		if (element.isDisplayed()) {
-			scrollToElement(element);
+			//scrollToElement(element);
 			element.click();
 			test.log(Status.PASS, "Clicked on Webelement : " + element.toString());
 			
@@ -103,7 +103,7 @@ public static void scrollToBottom() {
 public static void enterText(WebElement element, String text) {
 	try {
 
-		implicitWait(60);
+		//implicitWait(60);
 		if (element.isDisplayed()) {
 			element.clear();
 			Thread.sleep(1000);
@@ -257,8 +257,8 @@ public static void verifyText(WebElement element, String verifytext) {
 }
 public static void scrollToElement (WebElement element) throws InterruptedException{ 
 	scrollToTop();
-	waitForElement(driver, element, 20);
-implicitWait(60);
+	waitForElement(driver, element, 10);
+//implicitWait(60);
 
 }
 

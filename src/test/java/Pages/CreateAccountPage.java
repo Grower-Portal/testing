@@ -1,11 +1,14 @@
 package Pages;
 
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -56,11 +59,23 @@ public WebElement signUp;
 @FindBy(xpath="//a[@class = 'back-to-login']")
 public WebElement backToLogin;
 
+@FindBy(xpath="//input[@type='email']")
+public WebElement gmailUserName;
+
+@FindBy(xpath="//span[text()='Next']")
+public WebElement btn_gmailNext;
+
+@FindBy(xpath="//input[@type='password']")
+public WebElement gmailPassword;
+
+@FindBy(xpath="//div[@class='Cp']/div/table/tbody/tr/td[4]//span/span[1]")
+public WebElement inboxMail;
 
 public void createAccountmethod(Map<String, String> dataMap ) {
 	
 	try {
-		
+		CommonFunctions.waitForPageLoaded();
+		//CommonFunctions.waitForElement(driver, signUpAccount, 20);
 		CommonFunctions.clickElement(signUpAccount);
 		CommonFunctions.enterText(firstName, dataMap.get("FirstName"));
 		test.log(Status.PASS, "Successfully entered the firstName to create account :" +dataMap.get("FirstName"));
@@ -80,7 +95,7 @@ public void createAccountmethod(Map<String, String> dataMap ) {
 		test.log(Status.PASS, "Successfully entered the PhoneNumber to create account :" +dataMap.get("PhoneNumber"));
 		CommonFunctions.enterText(address, dataMap.get("Address"));
 		test.log(Status.PASS, "Successfully entered the Address to create account :" +dataMap.get("Address"));
-		CommonFunctions.clickElement(signUp);
+		CommonFunctions.clickElement(verifyEmail);
 		test.log(Status.PASS, "Successfully created the account :");
 		
 		
@@ -90,7 +105,7 @@ public void createAccountmethod(Map<String, String> dataMap ) {
 	}
 	catch(Exception e) {
 		test.log(Status.FAIL, "Failed to create account. Error: createAccountmethod ");
-		
+		e.printStackTrace();
 		
 	}
 	
@@ -101,6 +116,26 @@ public boolean validateEmailFormat(String Email) {
 	Matcher match = pat.matcher(Email);
 	test.log(Status.INFO, "Enterd email format is : "+match.matches());
 	return match.matches();
+	
+}
+
+public void otpValidationMethod(String email, String password, String url) {
+	
+	try {
+		driver.switchTo().newWindow(WindowType.TAB);
+		Set<String> windows=driver.getWindowHandles();
+		Iterator<String> scope=windows.iterator();
+		String parentId=scope.next();
+		String chaildId=scope.next();
+		driver.navigate().to(url);
+		
+	}
+	
+	catch(Exception e) {
+		test.log(Status.FAIL, "Failed to create account. Error: otpValidationMethod ");
+		e.printStackTrace();
+		
+	}
 	
 }
 	}

@@ -32,16 +32,16 @@ public WebElement sensorDataDashboard;
 public WebElement sensorDataTxt;
 
 @FindBy(xpath="//p[text()='Sensor Data Metrics:']")
-public WebElement dataMetrics;
+public WebElement txt_dataMetrics;
 
 @FindBy(xpath="//p[text()='Location: ']")
-public WebElement location;
+public WebElement txt_location;
 
 @FindBy(xpath="//p[text()='ABC123']")
-public WebElement uniqueID;
+public WebElement txt_uniqueID;
 
 @FindBy(xpath="//p[text()='Depth: ']")
-public WebElement depth;
+public WebElement txt_depth;
 
 LoginPage lp = new LoginPage();
 
@@ -51,6 +51,7 @@ public void sensorDatamethod(Map<String, String> dataMap) {
 	
 	try {
 		lp.navigationMenu(dataMap.get("menuOption"));
+		CommonFunctions.clickElement(sensorDataButton);
 		if (CommonFunctions.getValue(sensorDataDashboard).equalsIgnoreCase(dataMap.get("sensorDataHeading"))) {
 			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("sensorDataHeading"));
 			
@@ -58,6 +59,42 @@ public void sensorDatamethod(Map<String, String> dataMap) {
 		   
 			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(sensorDataDashboard));
 		}
+		if (CommonFunctions.getValue(sensorDataTxt).equalsIgnoreCase(dataMap.get("SensorData"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("SensorData"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(sensorDataTxt));
+		}
+		if (CommonFunctions.getValue(txt_dataMetrics).equalsIgnoreCase(dataMap.get("DataMetrics"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("DataMetrics"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_dataMetrics));
+		}
+		if (CommonFunctions.getValue(txt_location).equalsIgnoreCase(dataMap.get("Location"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("Location"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_location));
+		}
+		if (CommonFunctions.getValue(txt_uniqueID).equalsIgnoreCase(dataMap.get("UniqueId"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("UniqueId"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_uniqueID));
+		}
+		if (CommonFunctions.getValue(txt_depth).equalsIgnoreCase(dataMap.get("Depth"))) {
+			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("Depth"));
+			
+		} else {
+		   
+			test.log(Status.FAIL, "Content Mismatched for :" + CommonFunctions.getValue(txt_depth));
+		}
+		
 	
 	}
 	catch(Exception e) {
