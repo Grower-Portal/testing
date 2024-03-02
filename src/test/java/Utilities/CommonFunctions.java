@@ -28,31 +28,19 @@ import com.aventstack.extentreports.Status;
 import com.google.common.io.Files;
 
 public class CommonFunctions extends TestBase {
-<<<<<<< HEAD
-public static void clickElement(WebElement element) {
-	try {
-		//implicitWait(60);
-		waitForElement(driver, element,10);
-		//waitForElementsToBeclickable(element,30);
+
+	public static void clickElement(WebElement element) {
+
+		// implicitWait(60);
+		waitForElement(driver, element, 10);
+		// waitForElementsToBeclickable(element,30);
 		if (element.isDisplayed()) {
-			//scrollToElement(element);
+			// scrollToElement(element);
 			element.click();
 			test.log(Status.PASS, "Clicked on Webelement : " + element.toString());
-			
+
 		} else {
 			test.log(Status.FAIL, "Unable to click on Webelement: " + element.toString());
-=======
-	public static void clickElement(WebElement landingPageMenu) {
-		try {
-
-			waitForElement(driver, landingPageMenu, 10);
-
-			landingPageMenu.click();
-			test.log(Status.PASS, "Clicked on Webelement : " + landingPageMenu.toString());
-
-		} catch (Exception e) {
-			test.log(Status.FAIL, "Unable to click on Webelement: " + landingPageMenu.toString());
->>>>>>> 4cd16d686b20ace23f9c0e4db642fd5ab7d8d6f4
 		}
 	}
 
@@ -100,17 +88,6 @@ public static void clickElement(WebElement element) {
 
 	}
 
-<<<<<<< HEAD
-public static void enterText(WebElement element, String text) {
-	try {
-
-		//implicitWait(60);
-		if (element.isDisplayed()) {
-			element.clear();
-			Thread.sleep(1000);
-			element.sendKeys(text);
-			test.log(Status.PASS, "Text entered is " + text);
-=======
 	public static void scrollToBottom() {
 		try {
 			implicitWait(60);
@@ -119,7 +96,7 @@ public static void enterText(WebElement element, String text) {
 			js.executeScript("window.scrollBy(0, document.body.scrollHeight)", "");
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Unable to scrollToTop ");
->>>>>>> 4cd16d686b20ace23f9c0e4db642fd5ab7d8d6f4
+
 		}
 	}
 
@@ -243,13 +220,6 @@ public static void enterText(WebElement element, String text) {
 			// element);
 		}
 	}
-<<<<<<< HEAD
-}
-public static void scrollToElement (WebElement element) throws InterruptedException{ 
-	scrollToTop();
-	waitForElement(driver, element, 10);
-//implicitWait(60);
-=======
 
 	public static void waitForElementsToBeclickable(WebElement element, int timeout) {
 		try {
@@ -321,6 +291,5 @@ public static void scrollToElement (WebElement element) throws InterruptedExcept
 			e.printStackTrace();
 		}
 	}
->>>>>>> 4cd16d686b20ace23f9c0e4db642fd5ab7d8d6f4
 
 }

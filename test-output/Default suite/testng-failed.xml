@@ -3,25 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="Scripts.ValidateSignUpFunctionality">
+      <class name="Scripts.ValidateAboutFunctionality">
         <methods>
-          <include name="validatelogin" invocation-numbers="0"/>
           <include name="cleanup"/>
           <include name="method"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- Scripts.ValidateSignUpFunctionality -->
-=======
-      <class name="Scripts.ValidateContactUsFunctionality">
-        <methods>
-          <include name="cleanup"/>
+          <include name="validateAbout"/>
           <include name="validatelogin"/>
           <include name="init"/>
-          <include name="method"/>
         </methods>
-      </class> <!-- Scripts.ValidateContactUsFunctionality -->
->>>>>>> 4cd16d686b20ace23f9c0e4db642fd5ab7d8d6f4
+      </class> <!-- Scripts.ValidateAboutFunctionality -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

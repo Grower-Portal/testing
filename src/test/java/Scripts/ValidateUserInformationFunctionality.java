@@ -12,40 +12,36 @@ import Utilities.GrowerDataProvider.StaticProviderLoginPage;
 import Utilities.GrowerDataProvider.StaticProviderUserInformationPage;
 import Utilities.TestBase;
 
-public class ValidateUserInformationFunctionality extends TestBase{ 
+public class ValidateUserInformationFunctionality extends TestBase {
 	UserInformationPage userinformationpage;
 	LoginPage loginpage;
+
 	@BeforeClass()
 	public void method() {
-		
+
 		parenttest = TestBase.extent.createTest("User Information Functionality");
-		driver = TestBase.launchURL( TestBase.configMap.get("browser"),TestBase.configMap.get("ApplicationURL"));	
-		userinformationpage=new UserInformationPage();
+		driver = TestBase.launchURL(TestBase.configMap.get("browser"), TestBase.configMap.get("ApplicationURL"));
+		userinformationpage = new UserInformationPage();
 		loginpage = new LoginPage();
-		
+
 	}
-@Test(dataProvider = "UserInformation", dataProviderClass = StaticProviderUserInformationPage.class)
-public void validatelogin(Map<String, String> dataMap)  {
-	TestBase.test=parenttest.createNode("Validating with the provided credentials");
-	loginpage.loginmethod(dataMap.get("UserName"), dataMap.get("Password"));
+
+	@Test(priority = 1)
+	public void validatelogin() {
+		TestBase.test = parenttest.createNode("Validating with the provided credentials");
+		loginpage.loginmethod(TestBase.configMap.get("UserName"), TestBase.configMap.get("Password"));
+	}
+
+	@Test(dataProvider = "UserInformation", dataProviderClass = StaticProviderUserInformationPage.class, priority = 2)
+	public void validateuserinformationt(Map<String, String> dataMap) {
+		TestBase.test = parenttest.createNode("Validating user information functionality");
+		userinformationpage.userInformationmethod(dataMap);
+	}
+
+
+	@AfterClass()
+	public void cleanup() {
+		TestBase.extent.flush();
+		driver.quit();
+	}
 }
-
-@Test(dataProvider = "UserInformation", dataProviderClass = StaticProviderUserInformationPage.class)
-public void validateuserinformationt(Map<String, String> dataMap)  {
-	TestBase.test=parenttest.createNode("Validating user information functionality");
-	userinformationpage.userInformationmethod(dataMap);
-}
-
-
-@AfterClass()
-public void cleanup() {
-	TestBase.extent.flush();
-<<<<<<< HEAD
-	//driver.quit();
-=======
-	driver.quit();
->>>>>>> 4cd16d686b20ace23f9c0e4db642fd5ab7d8d6f4
-}
-
-}
-
