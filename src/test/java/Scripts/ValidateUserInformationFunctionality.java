@@ -38,7 +38,6 @@ public class ValidateUserInformationFunctionality extends TestBase {
 		userinformationpage.userInformationmethod(dataMap);
 	}
 
-
 	@AfterClass()
 	public void cleanup() {
 		TestBase.extent.flush();

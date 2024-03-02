@@ -54,6 +54,7 @@ public void contactmethod(Map<String, String> dataMap) {
 	
 	
 	try {
+		Thread.sleep(2000);
 		lp.navigationMenu(dataMap.get("menuOption"));
 		if (CommonFunctions.getValue(txt_contactUsTxt).equalsIgnoreCase(dataMap.get("contactUsText"))) {
 			test.log(Status.PASS, "Content matched successfully :" + dataMap.get("contactUsText"));
